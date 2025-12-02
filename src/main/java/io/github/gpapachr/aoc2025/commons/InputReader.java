@@ -7,11 +7,16 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.springframework.stereotype.Component;
 
-@Component
 public class InputReader {
+    private static final InputReader INSTANCE = new InputReader();
     private static final String INPUTS_BASE_PATH = "inputs/";
+
+    private InputReader() {}
+
+    public static InputReader getInstance() {
+        return INSTANCE;
+    }
 
     public List<String> readMainInputLines(int day) {
         return readLines(getResourcePath(day, ""));
@@ -33,7 +38,7 @@ public class InputReader {
      * @throws IllegalArgumentException If the resource file is not found at the specified path.
      * @throws RuntimeException         If an error occurs while reading the resource file.
      */
-    public List<String> readLines(String resourcePath) {
+    private List<String> readLines(String resourcePath) {
         try (InputStream inputStream = getClassLoader().getResourceAsStream(resourcePath)) {
             if (inputStream == null) {
                 throw new IllegalArgumentException("Resource not found: " + resourcePath);
