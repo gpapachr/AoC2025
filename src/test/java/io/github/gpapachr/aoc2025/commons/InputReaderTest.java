@@ -10,7 +10,6 @@ class InputReaderTest {
     void readExampleInputLines() {
         InputReader inputReader = InputReader.getInstance();
         var lines = inputReader.readExampleInputLines(1);
-        lines.forEach(System.out::println);
         assertEquals(10, lines.size());
         assertNotNull(lines);
         assertFalse(lines.isEmpty());

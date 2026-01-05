@@ -35,3 +35,4 @@ build/
 /mvnw
 /.gitattributes
 /.mvn/
+.DS_Store

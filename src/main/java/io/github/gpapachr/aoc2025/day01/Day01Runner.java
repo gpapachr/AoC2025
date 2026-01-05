@@ -1,14 +1,12 @@
 package io.github.gpapachr.aoc2025.day01;
 
-import io.github.gpapachr.aoc2025.commons.InputReader;
+import io.github.gpapachr.aoc2025.Day;
+import io.github.gpapachr.aoc2025.DayRunner;
 import java.util.List;
-import lombok.val;
 
-public class Day01Runner {
-    private static final InputReader inputReader = InputReader.getInstance();
-
+public class Day01Runner extends DayRunner {
     public static void main(String[] args) {
-        val day = new Day01();
+        Day day = new Day01();
 
         List<String> input = inputReader.readMainInputLines(day.dayNumber());
 
