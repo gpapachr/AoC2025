@@ -10,8 +10,8 @@ public class Day01Runner extends DayRunner {
 
         List<String> input = inputReader.readMainInputLines(day.dayNumber());
 
-        Integer part1 = day.solvePart1(input);
-        Integer part2 = day.solvePart2(input);
+        int part1 = day.solvePart1(input).intValue();
+        int part2 = day.solvePart2(input).intValue();
 
         System.out.println("Day " + day.dayNumber() + " - Part 1: " + part1);
         System.out.println("Day " + day.dayNumber() + " - Part 2: " + part2);

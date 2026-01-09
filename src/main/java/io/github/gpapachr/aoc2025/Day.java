@@ -5,7 +5,7 @@ import java.util.List;
 public interface Day {
     int dayNumber();
 
-    Integer solvePart1(List<String> input);
+    Number solvePart1(List<String> input);
 
-    Integer solvePart2(List<String> input);
+    Number solvePart2(List<String> input);
 }
